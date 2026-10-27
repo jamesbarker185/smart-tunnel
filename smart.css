@@ -1,0 +1,132 @@
+.st .iso-plate {
+  overflow: hidden;
+}
+
+.st {
+  --st-void: #5d6366;
+  --st-water: #7f979f;
+  --st-silt: #a08c70;
+  --st-lamp-off: #c9c9cc;
+  --st-lamp-on: #000000;
+  --st-amber: #d98a1a;
+  --st-go: #2f9e63;
+  --st-stop: #d6403d;
+}
+
+.iso[data-theme="dark"] .st {
+  --st-void: #050505;
+  --st-water: #3f6f86;
+  --st-silt: #6b5a42;
+  --st-lamp-off: #2a2a2a;
+  --st-lamp-on: #ffffff;
+}
+
+.st-credit {
+  position: absolute;
+  top: 34px;
+  right: 20px;
+  color: var(--anatomy-muted);
+  font-family: var(--anatomy-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.st-stage {
+  position: relative;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: ew-resize;
+  margin: 0 -8px;
+}
+
+.st-stage:focus-visible {
+  outline: 1px solid var(--anatomy-muted);
+  outline-offset: 6px;
+}
+
+.st-said {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.st-stage > svg,
+.st-stage > canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.st-stage > .st-layer {
+  position: absolute;
+  inset: 0;
+  height: 100% !important;
+  pointer-events: none;
+}
+
+.st-stage[data-gl] .st-fallback {
+  display: none;
+}
+
+.st-void {
+  fill: var(--st-void);
+  stroke: none;
+}
+
+.st-water {
+  fill: var(--st-water);
+  fill-opacity: 0.55;
+  stroke: none;
+}
+
+.st-silt path {
+  fill: var(--st-silt);
+  stroke: none;
+}
+
+.st-lamp {
+  fill: var(--st-lamp-off);
+}
+
+.st-lamp[data-on] {
+  fill: var(--st-lamp-on);
+}
+
+.st-signal {
+  fill: var(--st-lamp-off);
+}
+
+.st-signal[data-state="go"] {
+  fill: var(--st-go);
+}
+
+.st-signal[data-state="stop"] {
+  fill: var(--st-stop);
+}
+
+.st-beacon {
+  fill: var(--st-amber);
+}
+
+@media (max-width: 560px) {
+  .st-credit {
+    top: 32px;
+    right: 12px;
+    font-size: 8.5px;
+  }
+  .st-stage {
+    margin: 0 -10px;
+  }
+}
+
+.st-stripe {
+  fill: var(--st-stop);
+  stroke: none;
+}
