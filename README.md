@@ -2,6 +2,7 @@
 
 An interactive isometric cutaway of Kuala Lumpur's SMART Tunnel (Stormwater Management And Road Tunnel), showing how it switches between a double-deck motorway and a flood channel through its four operating modes.
 
+- `index.html`: opens the figure (the GitHub Pages front page).
 - `smart-tunnel.html`: the interactive figure (light theme). Self-contained; open it in any browser.
 - `smart-tunnel-dark.html`: the same figure, dark theme.
 - `smart-tunnel-preview.png`: a 1200×1200 preview image for LinkedIn.
